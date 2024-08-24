@@ -1,7 +1,8 @@
 import User from '../models/user.modle.js';
 import bcryptjs from 'bcryptjs';
+import { errorHandler } from '../utils/error.js';
 
-export const signup = async(req,res)=>{
+export const signup = async(req,res,next)=>{
     const{username,email,password}=req.body;
     const hashedPassword = bcryptjs.hashSync(password,10);
     const newUser = new User({username,email,password :hashedPassword});
@@ -9,8 +10,8 @@ export const signup = async(req,res)=>{
         await newUser.save()
     res.status(201).json('User created Succesfully!!');
         
-    } catch (error) {
-        res.status(500).json('ohh my gotto, a user already exists with these credentials  '+error.message);
+    } catch (error) {// here we tried to automate the error detetction and show it on the user side.
+        next(error);
         
     }
     
