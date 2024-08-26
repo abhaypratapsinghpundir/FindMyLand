@@ -62,13 +62,13 @@ export default function SignIn() {
           disabled={loading}
           className="bg-green-400 text-white p-3 rounded-lg uppercase hover:opacity-70"
         >
-          {loading ? 'Loading...' : 'Sign In'}
+          {loading ? 'Loading.....' : 'Sign In'}
         </button>
       </form>
       <div className="flex gap-2 mt-5">
         <p>Don't have an account?</p>
         <Link to="/sign-up">
-          <span className="text-blue-800">Sign Up</span>
+          <span className="text-blue-800"> Sign Up</span>
         </Link>
       </div>
       {error && <p className="text-red-700 mt-5">{error}</p>}
