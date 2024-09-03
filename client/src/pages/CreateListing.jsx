@@ -251,7 +251,7 @@ export default function CreateListing() {
                 min='1'
                 max='10'
                 required
-                className='p-3 border border-gray-300 rounded-lg'
+                className='p-3 border border-green-800 rounded-lg'
                 onChange={handleChange}
                 value={formData.bedrooms}
               />
@@ -264,7 +264,7 @@ export default function CreateListing() {
                 min='1'
                 max='10'
                 required
-                className='p-3 border border-gray-300 rounded-lg'
+                className='p-3 border border-green-800 rounded-lg'
                 onChange={handleChange}
                 value={formData.bathrooms}
               />
@@ -277,7 +277,7 @@ export default function CreateListing() {
                 min='50'
                 max='10000000'
                 required
-                className='p-3 border border-gray-300 rounded-lg'
+                className='p-3 border border-green-800 rounded-lg'
               />
               <div className='flex flex-col items-center'>
                 <p>Regular price</p>
@@ -294,7 +294,7 @@ export default function CreateListing() {
                 min='1'
                 max='10'
                 required
-                className='p-3 border border-gray-300 rounded-lg'
+                className='p-3 border border-green-800 rounded-lg'
                 onChange={handleChange}
                 value={formData.discountPrice}
               />
@@ -358,7 +358,7 @@ export default function CreateListing() {
             ))}
           <button
             disabled={loading || uploading}
-            className='p-3 bg-slate-700 text-white rounded-lg uppercase hover:opacity-95 disabled:opacity-80'
+            className='p-3 bg-green-700 text-white rounded-lg uppercase hover:opacity-95 disabled:opacity-80'
           >
             {loading ? 'Creating...' : 'Create listing'}
           </button>
